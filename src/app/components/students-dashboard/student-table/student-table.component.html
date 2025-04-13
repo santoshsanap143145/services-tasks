@@ -1,0 +1,43 @@
+<table class="table table-bordered text-center">
+  <thead>
+    <tr class="dark">
+      <th>Sr No</th>
+      <th>Full Name</th>
+      <th>Email</th>
+      <th>Contact</th>
+      <th>Edit</th>
+      <th>Remove</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let std of stdArr; let i = index" [ngClass]="{
+        'even': i % 2 === 0,
+        'odd': i % 2 !== 0
+    }">
+      <td>{{ i + 1 }}</td>
+      <td>{{ std.fname }} {{ std.lname }}</td>
+      <td>{{ std.email }}</td>
+      <td>{{ std.contact }}</td>
+      <td>
+        <button
+          (click)="editOnClick(std)"
+          mat-mini-fab
+          color="primary"
+          aria-label="Example icon button with a menu icon"
+        >
+          <mat-icon>edit</mat-icon>
+        </button>
+      </td>
+      <td>
+        <button
+        (click)="removeOnClick(std.stdId)"
+          mat-mini-fab
+          color="warn"
+          aria-label="Example icon button with a menu icon"
+        >
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

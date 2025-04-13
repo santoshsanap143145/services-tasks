@@ -1,0 +1,8 @@
+<div class="row">
+  <div class="col-md-8 offset-md-2 mb-5 md-mb-0">
+    <app-student-form [stdToBeEdit]="editStd"></app-student-form>
+  </div>
+  <div class="col-md-12">
+    <app-student-table (emitEditStd)="editObj($event)"></app-student-table>
+  </div>
+</div>

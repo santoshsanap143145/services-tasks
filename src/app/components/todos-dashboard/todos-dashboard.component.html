@@ -1,0 +1,10 @@
+
+
+<div class="row">
+    <div class="col-md-6">
+        <app-todo-form [TodoToBeEdited]="editTodo"></app-todo-form>
+    </div>
+    <div class="col-md-6">
+        <app-todo-list (emitTodoObj)="editTodoObj($event)"></app-todo-list>
+    </div>
+</div>
