@@ -1,0 +1,24 @@
+
+
+.fname{
+    font-weight: 400
+}
+
+.fname:disabled{
+    font-weight: 700;
+    background-color: transparent;
+    border: transparent;
+}
+
+.formGroup{
+    position: relative;
+}
+
+.dot {
+    position: absolute;
+    top: 11px;
+    left: -15px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}

@@ -1,0 +1,13 @@
+
+<div class="row">
+    <div class="col-md-10 offset-md-1">
+        <h2>Airline Passengers</h2>
+        <app-passenger-count [totalCheckIn]="totalCheckIn" [totalpass]="passArr.length"></app-passenger-count>
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let pass of passArr">{{pass.fullname}}</li>
+        </ul>
+    </div>
+    <div class="col-md-10 offset-md-1">
+        <app-passenger-card *ngFor="let pass of passArr" [passObj]="pass" (emitRemoveFlag)="gettotalCheckIn()"></app-passenger-card>
+    </div>
+</div>

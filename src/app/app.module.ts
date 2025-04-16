@@ -11,10 +11,9 @@ import { StudentFormComponent } from './components/students-dashboard/student-fo
 import { StudentTableComponent } from './components/students-dashboard/student-table/student-table.component';
 import { FormsModule } from '@angular/forms';
 
-import {MatButtonModule} from '@angular/material/button';
-import {MatIconModule} from '@angular/material/icon';
-import {MatSnackBarModule} from '@angular/material/snack-bar';
-
+import { MaterialModule } from './material/material.module';
+import { ProductsModule } from './products/products.module';
+import { PassengersModule } from './passengers/passengers.module';
 
 
 @NgModule({
@@ -31,10 +30,10 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
-    MatButtonModule,
-    MatIconModule,
-    MatSnackBarModule
-  ],
+    MaterialModule,
+    ProductsModule,
+    PassengersModule
+],
   providers: [],
   bootstrap: [AppComponent]
 })

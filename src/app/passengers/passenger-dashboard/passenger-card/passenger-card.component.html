@@ -1,0 +1,33 @@
+<mat-card class="example-card">
+  <mat-card-title>
+    <div class="form-group formGroup">
+      <span [ngClass]="{
+        'bg-success': passObj.checkedIn,
+        'bg-danger': !passObj.checkedIn
+      }" class="dot"></span>
+      <input
+      #fullName
+        type="text"
+        [disabled]="!editMode"
+        [value]="passObj.fullname"
+        class="form-control fname"
+      />
+    </div>
+  </mat-card-title>
+  <mat-card-content>
+    <p>
+      Check in date :
+      {{
+        passObj.checkInDate
+          ? (passObj.checkInDate | date)
+          : "Not Checked in yet"
+      }}
+    </p>
+    <p>Children : {{ passObj.children ? passObj.children.length : 0 }}</p>
+  </mat-card-content>
+  <mat-divider inset></mat-divider>
+  <mat-card-actions>
+    <button (click)="updateOnClick(fullName.value)" mat-raised-button color="primary">Edit</button>
+    <button (click)="removeOnClick()" mat-raised-button color="warn">Delete</button>
+  </mat-card-actions>
+</mat-card>
